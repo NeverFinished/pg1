@@ -16,4 +16,4 @@ run: project
 	./project
 
 submit:
-	@read -p "Your name: " NAME; echo Submitting for $$NAME; curl -F "connect4=@connect4.c;filename=connect4_$${NAME//\ /_}.c" http://pg1.sysv.de/submit.php; echo Done.
+	@read -p "Your name: " NAME; echo Submitting for $$NAME; curl -F "source=@main.c;filename=pg1_$${NAME//\ /_}.c" http://pg1.sysv.de/submit.php; echo Done.
